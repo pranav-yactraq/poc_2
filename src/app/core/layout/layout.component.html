@@ -1,0 +1,15 @@
+<h1 class = "text-red-800 h-24 bg-teal-500 text-bold flex flex-row justify-center items-center w-100">Header</h1>
+<div class = "flex flex-row">
+<div class = "w-[300px] h-[600px] flex flex-col gap-y-12 bg-cyan-700">
+    <div class = "mt-4" (click) = "navigate('/app')">Home</div>
+    <div class = "mt-4"(click) = "toggle()">Call Analytics</div>
+    <div *ngIf = "subOptions" (click) = "navigate('app/call-analytics/callSummary')" class = "mt-2">Call Scoring</div>
+    <div *ngIf = "subOptions"
+(click) = "navigate('app/call-analytics/callAtmosphere')"
+      class = "mt-2">360 Call Atmosphere</div>
+    <div (click) = "navigate('app/realtime')">Realtime</div>
+    <div (click) = "navigate('app/phrase-reports/')">Phrase-reports</div>
+</div>
+ <router-outlet></router-outlet>
+</div>
+

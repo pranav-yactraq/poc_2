@@ -1,0 +1,14 @@
+<div class = "flex flex-row mt-4 gap-x-4 pl-4">
+  <div (click) = 'toggle(0)' [ngStyle] = "{'color' : tabNo == 0 ? 'red' : 'black'}" >Phrase Reports</div>
+  <div (click) = 'toggle(1)' [ngStyle] = "{'color' : tabNo == 1 ? 'red' : 'black'}" >Basic Phrase Spotting</div>
+</div>
+
+<div  class = "w-3/5 h-[500px] flex flex-row justify-center items-center">
+<div *ngIf = "tabNo==0">
+  <app-phrase-reports></app-phrase-reports>
+</div>
+
+<div *ngIf = "tabNo==1">
+  <app-phrase-occurence-report></app-phrase-occurence-report>
+</div>
+</div>
